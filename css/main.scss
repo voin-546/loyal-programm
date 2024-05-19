@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+// ПЕРЕКЛЮЧАТЕЛЬ
+
+:root {
+    --font-family: "Open Sans";
+}
+body {
+    font-family: var(--font-family);
+    @media (prefers-scolor-scheme: dark) {
+        background-color: #1F1E1C;
+    }
+    &.dark {
+        background-color: #1F1E1C;
+    }
+}
+:host {
+    display: flex;
+}
+.animated-header {
+    padding-block: 8px;
+    background-color: #333230;
+    width: 100%;
+    display: flex;
+   .row {
+    animation: text 120s infinite linear;
+    display: flex;
+    .text {
+        display: flex;
+        gap: 5px;
+        padding-left: 30px;
+        white-space: nowrap;
+        @keyframes text {
+            0% {
+              transform: translate(0, 0);
+            }
+            
+            100% {
+              transform: translate(-160%, 0);
+            }
+        }
+        .white {
+            font: 500 12px/15.6px var(--font-family);
+            color: #fff;
+        }
+        .green {
+            color: #32AD13;
+            font: 500 12px/15.6px var(--font-family);
+        }
+        .yellow {
+            color: #D7B27B;
+            font: 500 13px/13px var(--font-family);
+        }
+        .red {
+            color: #AC4747;
+            font: 500 12px/15.6px var(--font-family);
+        }
+        .gray {
+            color: #1F1E1C;
+            font: 500 14px/15.6px var(--font-family);
+        }
+     } 
+   }
+}
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #333230;
+    .clip {
+        width: 100%;
+        background-color: #1F1E1C;
+        height: 100%;
+        border-radius: 50px 50px 0 0;
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: min(1380px, 100%);
+        height: 80px;
+        margin: auto;
+    }
+    a.logo {
+        display: inline-flex;
+        gap: 5px;
+        align-items: center;
+        span {
+            font: 400 18px "Mulish" !important;
+            &:nth-of-type(2) { color: #fff; }
+            &:nth-of-type(3) { color: #D7B27B; }
+        }
+    }
+    nav {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            display: flex;
+            &:nth-of-type(1) {
+                gap: 20px;
+                white-space: nowrap;
+                align-items: center;
+                margin-left: 40px;
+                li a {
+                    color: #fff;
+                }
+            }
+            &:nth-of-type(2) {
+                width: min(100%, 848px);
+                text-align: right;
+                justify-content: end;
+                gap: 22px;
+                align-items: center;
+                .text p {
+                    color: #333230;
+                    font: 400 12px/14.4px var(--font-family);
+                }
+            }
+        }
+        .dropdown {
+            background-color: #333230;;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            height: 100%;
+            select {
+                border: none;
+                border-radius: 100px;
+                padding: 10px;
+                background-color: #333230;
+                font: 500 14px/16.8px var(--font-family);
+                appearance: none;
+                color: #fff;
+                cursor: pointer;
+            }
+            svg {
+                transform: translateX(-5px);
+                stroke: #D7B27B;
+            }
+        }
+        .btn {
+            background: #D7B27B;
+            color: #1F1E1C;
+            padding: 12px 26px;
+            border-radius: 100px;
+            font-weight: 500;
+        }
+    }
+}

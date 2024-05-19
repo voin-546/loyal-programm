@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+:root {
+  --font-family: "Open Sans";
+}
+
+body {
+  font-family: var(--font-family);
+}
+@media (prefers-scolor-scheme: dark) {
+  body {
+    background-color: #1F1E1C;
+  }
+}
+body.dark {
+  background-color: #1F1E1C;
+}
+
+:host {
+  display: flex;
+}
+
+.animated-header {
+  padding-block: 8px;
+  background-color: #333230;
+  width: 100%;
+  display: flex;
+}
+.animated-header .row {
+  -webkit-animation: text 120s infinite linear;
+          animation: text 120s infinite linear;
+  display: flex;
+}
+.animated-header .row .text {
+  display: flex;
+  gap: 5px;
+  padding-left: 30px;
+  white-space: nowrap;
+}
+@-webkit-keyframes text {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-160%, 0);
+  }
+}
+@keyframes text {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-160%, 0);
+  }
+}
+.animated-header .row .text .white {
+  font: 500 12px/15.6px var(--font-family);
+  color: #fff;
+}
+.animated-header .row .text .green {
+  color: #32AD13;
+  font: 500 12px/15.6px var(--font-family);
+}
+.animated-header .row .text .yellow {
+  color: #D7B27B;
+  font: 500 13px/13px var(--font-family);
+}
+.animated-header .row .text .red {
+  color: #AC4747;
+  font: 500 12px/15.6px var(--font-family);
+}
+.animated-header .row .text .gray {
+  color: #1F1E1C;
+  font: 500 14px/15.6px var(--font-family);
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #333230;
+}
+header .clip {
+  width: 100%;
+  background-color: #1F1E1C;
+  height: 100%;
+  border-radius: 50px 50px 0 0;
+}
+header .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(1380px, 100%);
+  height: 80px;
+  margin: auto;
+}
+header a.logo {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+header a.logo span {
+  font: 400 18px "Mulish" !important;
+}
+header a.logo span:nth-of-type(2) {
+  color: #fff;
+}
+header a.logo span:nth-of-type(3) {
+  color: #D7B27B;
+}
+header nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul:nth-of-type(1) {
+  gap: 20px;
+  white-space: nowrap;
+  align-items: center;
+  margin-left: 40px;
+}
+header nav ul:nth-of-type(1) li a {
+  color: #fff;
+}
+header nav ul:nth-of-type(2) {
+  width: min(100%, 848px);
+  text-align: right;
+  justify-content: end;
+  gap: 22px;
+  align-items: center;
+}
+header nav ul:nth-of-type(2) .text p {
+  color: #333230;
+  font: 400 12px/14.4px var(--font-family);
+}
+header nav .dropdown {
+  background-color: #333230;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+}
+header nav .dropdown select {
+  border: none;
+  border-radius: 100px;
+  padding: 10px;
+  background-color: #333230;
+  font: 500 14px/16.8px var(--font-family);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #fff;
+  cursor: pointer;
+}
+header nav .dropdown svg {
+  transform: translateX(-5px);
+  stroke: #D7B27B;
+}
+header nav .btn {
+  background: #D7B27B;
+  color: #1F1E1C;
+  padding: 12px 26px;
+  border-radius: 100px;
+  font-weight: 500;
+}/*# sourceMappingURL=main.css.map */
