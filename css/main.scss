@@ -16,6 +16,8 @@
 }
 body {
     font-family: var(--font-family);
+    background-color: #1F1E1C;
+    overflow-x: hidden;
     @media (prefers-scolor-scheme: dark) {
         background-color: #1F1E1C;
     }
