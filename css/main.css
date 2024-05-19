@@ -66,10 +66,6 @@ body.dark {
   background-color: #1F1E1C;
 }
 
-:host {
-  display: flex;
-}
-
 .animated-header {
   padding-block: 8px;
   background-color: #333230;
@@ -124,6 +120,11 @@ body.dark {
   font: 500 14px/15.6px var(--font-family);
 }
 
+.container {
+  width: min(1380px, 100%);
+  margin: auto;
+}
+
 header {
   width: 100%;
   height: 80px;
@@ -137,13 +138,10 @@ header .clip {
   border-radius: 50px 50px 0 0;
 }
 header .container {
-  width: 100%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: min(1380px, 100%);
-  height: 80px;
-  margin: auto;
 }
 header a.logo {
   display: inline-flex;
@@ -218,4 +216,42 @@ header nav .btn {
   padding: 12px 26px;
   border-radius: 100px;
   font-weight: 500;
+}
+
+section.links .container {
+  display: flex;
+  gap: 10px;
+  padding-top: 22px;
+}
+section.links .container [href="/"], section.links .container span {
+  color: #BAB8B4;
+}
+section.links .container [href="/loyal"] {
+  color: #fff;
+}
+section.blocks h1 {
+  color: #fff;
+  font: 500 80px/96px var(--font-family);
+}
+section.blocks .big {
+  display: flex;
+  justify-content: space-between;
+  width: min(100%, 876px);
+  flex-wrap: wrap;
+  background-color: #58544C;
+  border-radius: 30px;
+  padding: 40px;
+}
+section.blocks .big .text {
+  font: 500 14px/16.8px var(--font-family);
+  color: #BAB8B4;
+}
+section.blocks .big .text p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+section.blocks .big .text h2 {
+  margin-top: 10px;
+  font: 600 22px/26.4% var(--font-family);
 }/*# sourceMappingURL=main.css.map */
